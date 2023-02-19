@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Appointment Scheduler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>Appointment Scheduler</h1>
+	<form>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name"><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email"><br>
+
+		<label for="date">Date:</label>
+		<input type="date" id="date" name="date"><br>
+
+		<label for="time">Time:</label>
+		<input type="time" id="time" name="time"><br>
+
+		<label for="notes">Notes:</label><br>
+		<textarea id="notes" name="notes"></textarea><br>
+
+		<input type="submit" value="Submit" onclick="submitform()">
+	</form>
+</body>
+</html>
+
+
+<script>
+
+
+function submitform(){
+ 
+
+    var name=document.getElementById("name").value;
+    var email=document.getElementById("email").value;
+    var date=document.getElementById("date").value;
+    var time=document.getElementById("time").value;
+    var notes=document.getElementById("notes").value;
+
+
+    console.log("Form submitted"+" Name "+name+" Email "+email+" Date "+date+" Time "+time+" Notes "+notes);
+
+    // create prompt message with form values
+    var message = "Name: " + name + "\n" +
+                    "Email: " + email + "\n" +
+                    "Date: " + date + "\n" +
+                    "Time: " + time + "\n" +
+                    "Notes: " + notes + "\n\n" +
+                    "Are you sure you want to submit this form?";
+
+                window.prompt(message);
+
+ 
+
+}
+</script>
